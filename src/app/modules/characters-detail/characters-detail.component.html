@@ -1,0 +1,63 @@
+<div class="grid grid-cols-12 gap-6 p-3 h-dvh">
+  <div
+    class="col-span-12 h-full flex flex-col justify-between bg-white rounded-lg dark:bg-gray-800"
+  >
+    <div class="flex justify-center items-center h-full">
+      <img class="rounded-t-lg" [src]="characterDetailData.image" alt="" />
+      <div class="p-5">
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ characterDetailData.name }}
+        </h5>
+        <p
+          class="mb-3 font-normal text-gray-700 dark:text-gray-400 flex flex-col-reverse gap-3 py-5"
+        >
+          <span class="font-bold"
+            >Episode amount: {{ characterDetailData?.episode?.length }}
+          </span>
+          <span class="font-bold"
+            >Status: {{ characterDetailData.status }}
+          </span>
+          <span class="font-bold"
+            >Location: {{ characterDetailData.location.name }}
+          </span>
+          <span class="font-bold"
+            >Origin: {{ characterDetailData.origin.name }}
+          </span>
+          <span class="font-bold"
+            >Species: {{ characterDetailData.species }}
+          </span>
+          <span class="font-bold"
+            >Gender: {{ characterDetailData.gender }}
+          </span>
+        </p>
+        <div class="p-3">
+          <a
+            href="/characters"
+            class="w-full flex items-center justify-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            <div class="h-4 w-4 mr-4">
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </div>
+            <div class="w-full">Back to Characters</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
